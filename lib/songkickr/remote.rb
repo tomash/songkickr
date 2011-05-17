@@ -60,7 +60,7 @@ module Songkickr
     # returns artist
 
     def artist_search(query={})
-        result = self.class.get("/search/artists.json?query=#{query[:artist_name]}", :query=>query)
+        result = self.class.get("/search/artists.json?query=#{query[:artist_name]}")
         Songkickr::ArtistResult.new result
     end
     
